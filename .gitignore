@@ -28,6 +28,7 @@ Thumbs.db
 
 # Environment files (secrets should use wrangler secret)
 .env
+.dev.vars
 .env.*
 !.env.example
 
@@ -36,3 +37,5 @@ Thumbs.db
 
 # Docker build artifacts
 *.tar
+
+CLAUDE.md
