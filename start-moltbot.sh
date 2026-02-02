@@ -185,6 +185,7 @@ if (process.env.CLAWDBOT_DEV_MODE === 'true') {
 // Telegram configuration
 if (process.env.TELEGRAM_BOT_TOKEN) {
     config.channels.telegram = config.channels.telegram || {};
+    delete config.channels.telegram.dm; // Remove invalid legacy key from R2 backups
     config.channels.telegram.botToken = process.env.TELEGRAM_BOT_TOKEN;
     config.channels.telegram.enabled = true;
     const telegramDmPolicy = process.env.TELEGRAM_DM_POLICY || 'pairing';
